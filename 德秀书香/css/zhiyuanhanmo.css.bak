@@ -1,0 +1,27 @@
+.content{
+width:1076px;height:520px;margin:20px auto;overflow:hidden;
+}
+body{
+background:#f3f3f3;
+}
+.content .left,.right,.center{
+float:left;
+}
+.hidden{
+display:none;position:absolute;left:0px;bottom:2px;background:#333;width:98.6%; height:37px;opacity:0.7;
+}
+.hidden1{
+height:150px;
+}
+.hidden span{
+color:#fff;font-size:14px;padding-left:10px;line-height:30px;display:inline-block;
+}
+.hidden p{
+color:#fff;line-height:22px;font-size:14px;padding-left:10px;padding-top:none;margin:0px;
+}
+a{
+position:relative;
+}
+a:hover .hidden{
+display:inline;color:#fff;
+}

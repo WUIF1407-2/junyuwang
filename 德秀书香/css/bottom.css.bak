@@ -1,0 +1,6 @@
+.bottom{
+width:1280px;height:110px;background:#009494;text-align:center;margin:0 auto;
+}
+.bottom p{
+padding-top:20px;color:#fff;
+}
