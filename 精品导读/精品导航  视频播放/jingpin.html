@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords"content=""/>
+<meta name="description" content="本篇网页的概述，一段话，对网站的进一步描述"/>
+<meta name="author"  content="网页作者的资料">
+<meta name="robots" content="" />
+<meta http-equiv="Content－Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/jingpin.css">
+<script text="text/javascript">
+
+/*
+  * 弹出DIV层
+*/
+function showDiv()
+ {
+ var Idiv= document.getElementById("Idiv");
+ var mou_head = document.getElementById('mou_head');
+ Idiv.style.display = "block";
+
+ //以下部分要将弹出层居中显示
+Idiv.style.left=276+"px";
+Idiv.style.top=150+"px";
+ 
+  
+ //以下部分使整个页面至灰不可点击
+var procbg = document.createElement("div"); //首先创建一个div
+ procbg.setAttribute("id","mybg"); //定义该div的id
+ procbg.style.background = "#000000";
+ procbg.style.width = "100%";
+ procbg.style.height = "100%";
+ procbg.style.position = "fixed";
+ procbg.style.top = "0";
+ procbg.style.left = "0";
+ procbg.style.zIndex = "500";
+ procbg.style.opacity = "0.6";
+ procbg.style.filter = "Alpha(opacity=70)";
+ //背景层加入页面
+document.body.appendChild(procbg);
+ //document.body.style.overflow = "hidden"; //取消滚动条
+}
+
+function closeDiv() //关闭弹出层
+{
+var Idiv=document.getElementById("Idiv");
+ Idiv.style.display="none";
+ document.body.style.overflow = "auto"; //恢复页面滚动条
+var body = document.getElementsByTagName("body");
+ var mybg = document.getElementById("mybg");
+ body[0].removeChild(mybg);
+ }
+</script>
+</head>
+
+<body>
+<!--head头部-->
+<div id="head">
+  <div class="head-1">
+  </div>
+  <div class="head-2">
+   <a href="#"><img src="img/logo.jpg" class="head-2-1"></a>
+   <div class="h-right">
+    <div class="h-r-1">
+	<input type="text" class="hr-1">
+	<a href="#"><img src="img/person.jpg" class="hr-2"></a>
+    </div>
+    <div class="h-r-1">
+	<input type="text" class="hr-1">
+	<a href="#"><img src="img/suo.jpg" class="hr-2"></a>
+    </div>
+	<div class="h-r-2">
+	<input type="text" class="hr-1-2">
+	<a href="#"><img src="img/search.jpg" class="hr-2"></a>
+    </div>
+   </div>
+  </div>
+</div>
+
+<!--nav导航-->
+<div id="nav">
+ <ul class="nav-one">
+  <li><a href="#">新闻资讯&nbsp;∨</a></li>
+  <li><a href="#">智渊翰墨&nbsp;∨</a></li>
+  <li><a href="#">君宇课堂&nbsp;∨</a></li>
+  <li><a href="#">丁香校园&nbsp;∨</a></li>
+  <li><a href="#">博雅阅读&nbsp;∨</a></li>
+  <li><a href="#">渊智律德&nbsp;∨</a></li>
+  <li><a href="#">图说山大&nbsp;∨</a></li>
+ </ul>
+ <div class="nav-two">
+   <img src="img/nav_y.jpg">
+ </div>
+</div>
+
+<!--body内容-->
+<div id="body">
+  <div class="body-one">
+  <!--bo-left 左侧-->
+    <div class="bo-left">
+	  <div class="bo-l-1">
+	   <img src="img/fenl.jpg">
+	  </div>
+	  <ul>
+         <li class="bo-l-2"><a href="#">山大往事</a></li>
+         <li class="bo-l-2"><a href="#">启智讲坛</a></li>
+         <li><dt class="bo-l-2"><a href="#">德秀书香</a></dt>
+               <dd class="bol-1"><a href="#">理工类</a></dd>
+               <dd class="bol-2"><a href="#">文史类</a></dd>
+         </li>
+         <li class="bo-l-3"><a href="#">精品导读</a></li>
+      </ul>
+	  <div class="bo-l-4"><img src="img/body_l_y.jpg"></div>
+	</div>
+	 <!--bo-left 右侧-->
+    <div class="bo-right">
+	  <!-- bo-r-1 上半部分 -->
+       <div class="bo-r-1">
+	     <div class="bor-1">
+		  <a href="#"><img src="img/br1.jpg"></a>
+		 </div>
+	     <div class="bor-2">
+		  <div class="bor-2-1"><a href="#">课件内容名称</a></div>
+		  <div class="bor-2-2">
+		  <img src="img/personal.jpg"> 主讲 马彦龙&nbsp;&nbsp;
+		  <img src="img/date.jpg"> 2014-11-16&nbsp;&nbsp;
+		  <img src="img/xiazai.jpg"> 10
+		  </div>
+		  <div class="bor-2-3">
+		   心灵是一方广袤的天空，它包容着世间的一切；心灵是一片宁静的湖水，偶尔也会泛起阵阵涟漪；心灵是一块皑皑的雪原，它辉映出一个缤纷的世界。
+		  </div>
+	    </div> 
+	   </div>
+	   <!-- bo-r-2 下半部分 -->
+     <div class="bo-r-2">
+        <div class="bor-1">
+		  <a href="javascript:;"onclick="showDiv()">
+		  <img src="img/br2.jpg"></a>
+
+<!-- Script 中所用到的div -->
+<div id="Idiv" style="display:none; position:absolute;z-index:1000;">
+    <!-- 包裹视频用的 div-->
+   <div id="mou_head" style="z-index:1001; position:absolute;
+   background:#eae1d8;">
+   <!--关闭按钮-->
+   <input type="button" value="×" onclick="closeDiv();"
+    style="float:right;background:#eae1d8;color:#666;border:0;"/>
+   <!--存放视频的地方-->
+   <embed src="mp4/xiaoxi.mp4" autostart="true"loop="true"width="400"height="250"></embed>
+   </div>
+</div>
+
+		 </div>
+	     <div class="bor-2">
+		  <div class="bor-2-1"><a href="#">视频名称</a></div>
+		  <div class="bor-2-2">
+		  <img src="img/personal.jpg"> 主讲 马彦龙&nbsp;&nbsp;
+		  <img src="img/date.jpg"> 2014-11-10&nbsp;&nbsp;
+		  <img src="img/xiazai.jpg"> 6
+		  </div>
+		  <div class="bor-2-3">
+		   心灵是一方广袤的天空，它包容着世间的一切；心灵是一片宁静的湖水，偶尔也会泛起阵阵涟漪；心灵是一块皑皑的雪原，它辉映出一个缤纷的世界。
+		  </div>
+	    </div>
+	 </div>
+   <!-- bo-r-1 底部部分 -->
+	 <div class="bo-r-3">
+	  <div class="bor-3">
+	  共3页&nbsp;
+	  <a href="#">首页</a>&nbsp;
+	  <a href="#">上一页</a>&nbsp;
+	  <input type="text" style="width:30px;height:16px;" value="1">&nbsp;
+      <a href="#">下一页</a>&nbsp;
+	  <a href="#">尾页</a>&nbsp;
+	  跳转到第&nbsp;
+	  <input type="text" style="width:30px;height:16px;">&nbsp;页
+	  </div> 
+	 </div>
+	</div>
+  </div>
+</div>
+
+
+<!-- bottom 底部-->
+<div id="bottom">
+<div></div>
+地址:<a href="#">山西省太原市坞城路92号</a>
+邮编:030006
+联系电话:<a href="#">0351-7010255</a><br>
+COPYRIGHT SHANXI UNIVERSITY ALL RIGHTS RESERVED 
+版权所有:<a href="#">山西大学</a><br>
+非经营性互联网信息服务审批号(晋)
+<a href="#">ICP备05000471号</a> 
+Webmaster@<a href="#">sxu.edu.cn</a>
+</div>
+</body>
+</html>
